@@ -388,4 +388,3 @@ photoBtn.addEventListener("click", async () => {
         console.error("Cat API Error:", error);
     }
 });
-
