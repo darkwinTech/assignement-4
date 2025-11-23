@@ -115,31 +115,66 @@
 <section id="projects">
     <div class="container">
         <h2 class="subtitle">Projects</h2>
-        <!-- Sort button -->
-        <div class="sort-controls">
-            <button id="sortBtn" class="btn">Sort By Date</button>
+        <!-- Skill Level Selector -->
+        <div class="skill-level-selector">
+            <label for="skillLevel">Show projects for:</label>
+            <select id="skillLevel" class="skill-select">
+                <option value="all">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+
+        <!-- Filter and Sort Controls -->
+        <div class="project-controls">
+            <div class="filter-controls">
+                <label for="categoryFilter">Filter by Category:</label>
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Projects</option>
+                    <option value="web">Web Projects</option>
+                    <option value="ml">Machine Learning</option>
+                    <option value="platform">Platform/App</option>
+                </select>
+            </div>
+            <div class="sort-controls">
+                <button id="sortByDate" class="btn sort-btn">Sort by Date</button>
+                <button id="sortByName" class="btn sort-btn">Sort by Name</button>
+            </div>
         </div>
         <!-- Projects List -->
         <div id="projectsGrid" class="projects-grid">
-            <article class="project-card" data-date="2024-03-10">
+            <article class="project-card" data-date="2024-03-10" data-category="ml" data-level="advanced" data-name="Predicting Air Quality Levels Based on Pollution Indicators">
                 <img src="assets/images/P2.png" alt="Project Two screenshot" />
+                <div class="project-meta">
+                    <span class="project-year">2023</span>
+                    <span class="project-category">Machine Learning</span>
+                </div>
                 <h3>Predicting Air Quality Levels Based on Pollution Indicators</h3>
                 <p>This project applies machine learning (KNN, SVM, and Deep Neural Networks) to classify air quality levels
                     (Good, Moderate, Poor, Hazardous) based on pollution indicators such as PM2.5, PM10, NO₂, SO₂, CO, temperature,
                     humidity, industrial proximity, and population density. The study evaluates models for accuracy, precision, and recall,
                     concluding that SVM provides the most balanced performance for real-world applications.</p>
             </article>
-            <article class="project-card" data-date="2025-02-01">
+            <article class="project-card" data-date="2025-02-01" data-category="web" data-level="advanced" data-name="Personal Portfolio Website">
                 <img src="assets/images/P3.png" alt="Portfolio Project screenshot" />
+                <div class="project-meta">
+                    <span class="project-year">2025</span>
+                    <span class="project-category">Web Project</span>
+                </div>
                 <h3>Personal Portfolio Website</h3>
                 <p>This website showcases my skills, experience, and projects as a Software Engineering student. Built using HTML, CSS, and JavaScript with responsive design and interactive features such as sorting and smooth navigation.</p>
             </article>
-            <article class="project-card" data-date="2025-01-15">
+            <article class="project-card" data-date="2025-01-15" data-category="platform" data-level="beginner" data-name="KFUPM Student Impact Hub">
                 <img src="assets/images/P1.png" alt="Project One screenshot" />
+                <div class="project-meta">
+                    <span class="project-year">2024</span>
+                    <span class="project-category">Platform/App</span>
+                </div>
                 <h3>KFUPM Student Impact Hub</h3>
                 <p>A platform that empowers students to collaborate on community service and social impact projects, find volunteering opportunities, and showcase their contributions.</p>
             </article>
         </div>
+        <p id="noProjectsMessage" class="no-projects-message" style="display: none;">No projects match your selected filters.</p>
     </div>
 </section>
 
