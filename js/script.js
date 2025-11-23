@@ -133,54 +133,6 @@ const categoryNames = {
     "platform": "Platform/App"
 };
 
-// Function to initialize project metadata (year and category)
-function initializeProjectMetadata() {
-    allProjects.forEach(project => {
-        const date = project.dataset.date;
-        const category = project.dataset.category;
-
-        // Extract year from date
-        const year = date ? new Date(date).getFullYear() : "";
-
-        // Get category display name
-        const categoryName = categoryNames[category] || category;
-
-        // Find or create project-meta div
-        let metaDiv = project.querySelector(".project-meta");
-        if (!metaDiv) {
-            metaDiv = document.createElement("div");
-            metaDiv.className = "project-meta";
-            const img = project.querySelector("img");
-            if (img && img.nextSibling) {
-                project.insertBefore(metaDiv, img.nextSibling);
-            } else if (img) {
-                project.appendChild(metaDiv);
-            }
-        }
-
-        // Update or create year and category spans
-        let yearSpan = metaDiv.querySelector(".project-year");
-        let categorySpan = metaDiv.querySelector(".project-category");
-
-        if (!yearSpan) {
-            yearSpan = document.createElement("span");
-            yearSpan.className = "project-year";
-            metaDiv.appendChild(yearSpan);
-        }
-        yearSpan.textContent = year;
-
-        if (!categorySpan) {
-            categorySpan = document.createElement("span");
-            categorySpan.className = "project-category";
-            metaDiv.appendChild(categorySpan);
-        }
-        categorySpan.textContent = categoryName;
-    });
-}
-
-// Initialize metadata on page load
-initializeProjectMetadata();
-
 // Set initial active state
 sortByDateBtn.classList.add("active");
 
