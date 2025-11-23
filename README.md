@@ -1,7 +1,7 @@
-# Aleen AlQarni – Personal Portfolio - Assignment 2
+# Aleen AlQarni – Personal Portfolio - Assignment 3
 
 ## 📌 Assignment Description
-For Assignment 2, I focused on enhancing my portfolio website by adding dynamic and interactive 
+For Assignment 3, <s> I focused on enhancing my portfolio website by adding dynamic and interactive 
 features using HTML, CSS, and JavaScript. For Dynamic Content, 
 I implemented a personalized greeting that updates based on the time of day and the user’s stored 
 name, added interactive buttons that allow users to switch between sections such as “Skills” and “Education,” 
@@ -10,7 +10,7 @@ I integrated the Cat API to fetch and display random images, and developed a sim
 shows confirmation messages, and stores submitted data in local storage for persistence. For Animations and Transitions, 
 I added smooth fade-in effects to improve the user experience and make the website feel more engaging. Finally, for Error Handling
 and User Feedback, I implemented inline error messages for invalid or empty fields (such as the email input), displayed friendly
-messages when API requests failed with an option to retry, and included loading states “Loading a cute cat” text while data is being fetched.
+messages when API requests failed with an option to retry, and included loading states “Loading a cute cat” text while data is being fetched.</s>
 ## ✨ Features
 * Personalized Greeting: Displays a custom greeting message that updates based on the time of day and the stored username. <br></br>
 * Section Switching: Interactive buttons allow users to switch between different sections such as Skills and Education dynamically. <br></br>
