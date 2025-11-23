@@ -371,3 +371,8 @@ label { display: grid; gap: 8px; font-size: 14px; color: #e8e8e8; }
     border-radius: 12px; margin: 1rem auto; display: block;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
+.nav-links i {
+    margin-right: 6px;
+    color: var(--accent);
+}
+
