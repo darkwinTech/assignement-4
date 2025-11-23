@@ -388,3 +388,48 @@ photoBtn.addEventListener("click", async () => {
         console.error("Cat API Error:", error);
     }
 });
+
+
+// === Random Accent Color ===
+const randomAccentBtn = document.getElementById("randomAccent");
+
+// Your allowed colors
+const ACCENT_PALETTE = [
+    { name: "Yellow", hex: "#facc15"},
+    { name: "Green",  hex: "#22c55e"},
+    { name: "Blue",   hex: "#3b82f6" },
+    { name: "Purple", hex: "#a855f7" },
+    { name: "Pink", hex: "#FF99E5" },
+    { name: "Trkuz", hex: "#66FFFF" }
+];
+
+function applyAccent(hex, rgb) {
+    const root = document.documentElement;
+    root.style.setProperty("--accent", hex);
+    try {
+        localStorage.setItem("accentHex", hex);
+        localStorage.setItem("accentRgb", rgb);
+    } catch {}
+}
+
+// Load saved accent (if any)
+(function initAccentFromStorage() {
+    const savedHex = localStorage.getItem("accentHex");
+    if (savedHex ) applyAccent(savedHex);
+})();
+
+// Helper to avoid picking the same color back-to-back
+function pickRandomAccent() {
+    const currentHex = getComputedStyle(document.documentElement)
+        .getPropertyValue("--accent")
+        .trim()
+        .toLowerCase();
+
+    const candidates = ACCENT_PALETTE.filter(c => c.hex.toLowerCase() !== currentHex);
+    return candidates[Math.floor(Math.random() * candidates.length)];
+}
+
+randomAccentBtn?.addEventListener("click", () => {
+    const choice = pickRandomAccent();
+    applyAccent(choice.hex);
+});

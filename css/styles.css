@@ -255,7 +255,7 @@ a { color: inherit; }
     border-radius: 14px;
 }
 
-github-repos {
+.github-repos {
     padding: 4rem 0;
 }
 
@@ -581,3 +581,123 @@ label { display: grid; gap: 8px; font-size: 14px; color: #e8e8e8; }
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/* Change theme randomly */
+:root{
+    --accent: #ff004f;            /* default red */
+    --accent-rgb: 255,0,79;
+}
+
+/* swap hard-coded reds to the variable via overrides */
+.nav-links a::after { background: var(--accent); }
+.header-text h1 span { color: var(--accent); }
+
+.btn {
+    border-color: var(--accent);
+    background: var(--accent);
+}
+.btn:focus-visible { box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .35); }
+.btn:hover { box-shadow: 0 8px 20px rgba(var(--accent-rgb), .25); }
+
+.tab-links.active-link { outline: 2px solid rgba(var(--accent-rgb), .45); }
+
+.project-year {
+    color: var(--accent);
+    background: rgba(var(--accent-rgb), .15);
+    border-color: rgba(var(--accent-rgb), .30);
+}
+.project-card h3 { color: var(--accent); }
+
+.sort-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .25);
+}
+
+.repo-header h3 a { color: var(--accent); }
+.repo-header h3 a:hover { color: #ff3366; } /* keep or tweak */
+.repo-card:hover {
+    box-shadow: 0 12px 36px rgba(var(--accent-rgb), .15);
+    border-color: rgba(var(--accent-rgb), .30);
+}
+
+.loading-state .loader { border-top-color: var(--accent); }
+.language-dot { background: var(--accent); }
+
+/* any remaining spots that used #FF004FFF */
+.tab-contents ul li span { color: var(--accent); }
+
+/* Nav accent button */
+.nav-accent-btn {
+    padding: 0.45rem 0.7rem;
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+    background: rgba(var(--accent-rgb), 0.12);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter .2s ease, transform .1s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.nav-accent-btn:hover {
+    filter: brightness(1.06);
+    background: rgba(var(--accent-rgb), 0.18);
+    box-shadow: 0 8px 20px rgba(var(--accent-rgb), .25);
+}
+
+.nav-accent-btn:active { transform: translateY(1px); }
+.nav-accent-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .35); }
+
+/* Optional: drawer version stretches full-width nicely */
+.nav-accent-btn.drawer {
+    width: 100%;
+    margin-top: .5rem;
+}
+/* Greeting form buttons (Save / Clear) */
+.inline-form button {
+    background: var(--accent) !important;
+    border: 1px solid var(--accent) !important;
+}
+.inline-form button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .35);
+}
+
+/* Time counter digits */
+.time-counter #timeDisplay {
+    color: var(--accent) !important;
+}
+
+/* Navbar underline + headline accent (already added, but ensure they win) */
+.nav-links a::after { background: var(--accent) !important; }
+.header-text h1 span { color: var(--accent) !important; }
+
+/* Tab active ring */
+.tab-links.active-link { outline: 2px solid rgba(var(--accent-rgb), .45) !important; }
+
+/* Project cards */
+.project-year {
+    color: var(--accent) !important;
+    background: rgba(var(--accent-rgb), .15) !important;
+    border-color: rgba(var(--accent-rgb), .30) !important;
+}
+.project-card h3 { color: var(--accent) !important; }
+
+/* Sort buttons */
+.sort-btn.active {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .25) !important;
+}
+
+/* Repo bits */
+.repo-header h3 a { color: var(--accent) !important; }
+.repo-card:hover {
+    box-shadow: 0 12px 36px rgba(var(--accent-rgb), .15) !important;
+    border-color: rgba(var(--accent-rgb), .30) !important;
+}
+.loading-state .loader { border-top-color: var(--accent) !important; }
+.language-dot { background: var(--accent) !important; }
+
+/* Icons (hamburger etc.) hover color */
+.icon-btn:hover svg path { fill: var(--accent) !important; }
