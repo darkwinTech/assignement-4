@@ -30,7 +30,7 @@ I implemented several interactive features using conditions and multi-step logic
 * CSS Variables for Theming: Implemented --accent color variables for quick theme changes without re-rendering or extra styles.
 
 # How to run ?
-1. Copy this link (https://github.com/darkwinTech/assignment-2.git) and clone it into your IDE (WebStorm or VSCode)
+1. Copy this link (https://github.com/darkwinTech/assignment-3.git) and clone it into your IDE (WebStorm or VSCode)
 2. Click Trust Project
 3. Go to index.html file and run it
 4. It will direct you to the browser (e.g. Chrome)
