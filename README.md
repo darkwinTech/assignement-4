@@ -1,26 +1,35 @@
 # Aleen AlQarni – Personal Portfolio - Assignment 3
 
 ## 📌 Assignment Description
-For Assignment 3, <s> I focused on enhancing my portfolio website by adding dynamic and interactive 
-features using HTML, CSS, and JavaScript. For Dynamic Content, 
-I implemented a personalized greeting that updates based on the time of day and the user’s stored 
-name, added interactive buttons that allow users to switch between sections such as “Skills” and “Education,” 
-and created a project cards that can be sorted by date. In the Data Handling section, 
-I integrated the Cat API to fetch and display random images, and developed a simple contact form that validates user inputs, 
-shows confirmation messages, and stores submitted data in local storage for persistence. For Animations and Transitions, 
-I added smooth fade-in effects to improve the user experience and make the website feel more engaging. Finally, for Error Handling
-and User Feedback, I implemented inline error messages for invalid or empty fields (such as the email input), displayed friendly
-messages when API requests failed with an option to retry, and included loading states “Loading a cute cat” text while data is being fetched.</s>
+For Assignment 3, I enhanced my portfolio website by adding dynamic, interactive, and data-driven features using HTML, CSS, and JavaScript. The project integrates external APIs, applies complex logic for filtering and validation, manages user preferences with localStorage, and optimizes performance for a smooth experience.
+Key improvements include fetching live GitHub repositories, displaying random cat photos via API, personalized greetings, project filtering and sorting, a randomized theme accent, and responsive design
 ## ✨ Features
-* Personalized Greeting: Displays a custom greeting message that updates based on the time of day and the stored username. <br></br>
-* Section Switching: Interactive buttons allow users to switch between different sections such as Skills and Education dynamically. <br></br>
-* Project Sorting: Project that can be sorted by date (latest first). <br></br>
-* API Integration (Cat API): Fetches random cat images from a public API with loading states and retry options for failed requests. <br></br>
-* Contact Form with Validation: Validates form inputs, shows confirmation messages upon submission, and stores user data in local storage. <br></br>
-* Smooth Fade-In Animations: Adds visual transitions for engaging user experience. <br></br>
-* Error Handling and Feedback: Inline error messages for invalid inputs, user-friendly notifications for API errors, and clear loading indicators.
+### API Integration:
+* Integrated the GitHub REST API to dynamically fetch and display my latest repositories. 
+    * The section shows each repository’s name, description, language, and “last updated” time in a user-friendly format.
+  Includes loading spinners and error messages to handle API downtime gracefully. <br></br>
+* Integrated a second external API to fetch and display random cat photos when the user clicks a button.
+  * Includes a loading animation and fallback message if the request fails.<br></br>
+* Icon-Enhanced Navigation: Added icons beside main navigation links (About, Projects, GitHub, Contact) for improved visual clarity and professional appearance.
 
-## How to run ?
+### Complex Logic:
+I implemented several interactive features using conditions and multi-step logic:
+* Projects Filter & Sort: Users can filter projects by category or skill level and sort them by date or name. If no projects match, a friendly message appears.
+* Contact Form Validation: Checks for empty fields and valid email format before allowing submission. Displays success or error messages and stores data in localStorage.
+* Timer: A live “Time on Site” counter updates every second.
+
+### State Management:
+* Randomized Theme Accent: The site lets users randomize the accent color with one click and remembers their chosen color using localStorage, keeping it consistent on reload.
+* Projects Show/Hide State: The visibility of the Projects section is saved, so if a user hides it, the setting remains after page reload.
+* Personalized Greeting: The user’s name is stored in localStorage and displayed in a custom greeting message that updates dynamically based on the time of day.
+
+### Performance
+* Optimized Code Structure: Used clean, efficient JavaScript and CSS
+* Deferred Script Loading
+* Responsive & Efficient Images: Used appropriately sized images for profile and project cards with fixed dimensions to prevent layout shifts and improve load time.
+* CSS Variables for Theming: Implemented --accent color variables for quick theme changes without re-rendering or extra styles.
+
+# How to run ?
 1. Copy this link (https://github.com/darkwinTech/assignment-2.git) and clone it into your IDE (WebStorm or VSCode)
 2. Click Trust Project
 3. Go to index.html file and run it
@@ -29,8 +38,9 @@ messages when API requests failed with an option to retry, and included loading 
 6. To see local storage of the contact form:
     * Right Click > Inspect > Console > write "JSON.parse(localStorage.getItem("contactSubmissions"))" to see users entered data.
 
-## 🤖 AI Use (Short Summary)
+# 🤖 AI Use (Short Summary)
 AI (ChatGPT) was used to:
+Clean and organize my CSS file by removing redundancy, improving formatting, and ensuring consistent styling. It also helped optimize selectors and structure the stylesheet for better readability and performance.
 
 ## 📂 Project Structure
 ```
