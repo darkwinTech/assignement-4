@@ -145,19 +145,11 @@ const GitHubUserName = "darkwinTech"
 
 async function fetchGitHubReps() {
     try {
-        const response = await fetch(`https://api.github.com/users/${GitHubUserName}/repos`)
+        const response = await fetch(`https://api.github.com/users/${GitHubUserName}/repos?sort=updated&per_page=6`)
         if (!response.ok) {
             throw new Error(`Failed to fetch repositories: ${response.status}`);
         }
         const repos = await response.json();
-
-        if (repos.length === 0) {
-            reposContainer.innerHTML = `
-                <div class="error-state">
-                    <p>No repositories found for this user.</p>
-                </div>`;
-            return;
-        }
         reposContainer.innerHTML = repos.map(repo => `
             <article class="repo-card">
                 <div class="repo-header">
