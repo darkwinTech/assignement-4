@@ -141,15 +141,17 @@ contactForm.addEventListener("submit", (e) => {
 });
 // Git Hub API
 const reposContainer = document.getElementById("reposContainer");
-const GitHubUserName = "darkwinTech"
+const GitHubUserName = "darkwinTech"; // Change this to your GitHub username
 
-async function fetchGitHubReps() {
+async function fetchGitHubRepos() {
     try {
-        const response = await fetch(`https://api.github.com/users/${GitHubUserName}/repos?sort=updated&per_page=6`)
+        const response = await fetch(`https://api.github.com/users/${GitHubUserName}/repos?sort=updated&per_page=6`);
+
         if (!response.ok) {
             throw new Error(`Failed to fetch repositories: ${response.status}`);
         }
         const repos = await response.json();
+
         reposContainer.innerHTML = repos.map(repo => `
             <article class="repo-card">
                 <div class="repo-header">
@@ -158,39 +160,46 @@ async function fetchGitHubReps() {
                             ${repo.name}
                         </a>
                     </h3>
-                    ${repo.private ? '<span class="repo-badge private">Private</span>' : '<span class="repo-badge public">Public</span>'}
+                    <span class="repo-badge public">Public</span>
                 </div>
                 <p class="repo-description">${repo.description || 'No description available.'}</p>
                 <div class="repo-meta">
                     <span class="repo-language">
                         ${repo.language ? `<span class="language-dot"></span>${repo.language}` : ''}
                     </span>
-                    <span class="repo-stats">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        ${repo.stargazers_count}
-                    </span>
-                    <span class="repo-stats">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                        </svg>
-                        ${repo.forks_count}
-                    </span>
+
                     <span class="repo-updated">Updated ${formatDate(repo.updated_at)}</span>
                 </div>
             </article>
         `).join('');
-    }
-    catch (error) {
-        reposContainer.innerHTML =  `<div class="error-state">
+    } catch (error) {
+        reposContainer.innerHTML = `
+            <div class="error-state">
                 <p>Unable to load repositories at this time.</p>
                 <p class="error-detail">${error.message}</p>
                 <p class="error-hint">Please check your internet connection and try again later.</p>
-            </div>`;
+            </div>
+        `;
         console.error("GitHub API Error:", error);
     }
 }
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = Math.abs(now - date);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return 'today';
+    if (diffDays === 1) return 'yesterday';
+    if (diffDays < 7) return `${diffDays} days ago`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+    if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+    return `${Math.floor(diffDays / 365)} years ago`;
+}
+
+// Fetch repositories when page loads
+fetchGitHubRepos();
 
 // THE CAT API - RANDOM PHOTO
 const photoBtn = document.getElementById("fetchPhoto");
