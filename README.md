@@ -2,7 +2,7 @@
 
 ## 📌 Assignment Description
 For Assignment 3, I enhanced my portfolio website by adding dynamic, interactive, and data-driven features using HTML, CSS, and JavaScript. The project integrates external APIs, applies complex logic for filtering and validation, manages user preferences with localStorage, and optimizes performance for a smooth experience.
-Key improvements include fetching live GitHub repositories, displaying random cat photos via API, personalized greetings, project filtering and sorting, a randomized theme accent, and responsive design
+Key improvements include fetching live GitHub repositories, project filtering and sorting, a randomized theme accent, and responsive design
 ## ✨ Features
 ### API Integration:
 * Integrated the GitHub REST API to dynamically fetch and display my latest repositories. 
@@ -30,7 +30,7 @@ I implemented several interactive features using conditions and multi-step logic
 * CSS Variables for Theming: Implemented --accent color variables for quick theme changes without re-rendering or extra styles.
 
 # How to run ?
-1. Copy this link (https://github.com/darkwinTech/assignment-2.git) and clone it into your IDE (WebStorm or VSCode)
+1. Copy this link (https://github.com/darkwinTech/assignment-3.git) and clone it into your IDE (WebStorm or VSCode)
 2. Click Trust Project
 3. Go to index.html file and run it
 4. It will direct you to the browser (e.g. Chrome)
