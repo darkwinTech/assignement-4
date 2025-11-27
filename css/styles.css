@@ -376,3 +376,40 @@ label { display: grid; gap: 8px; font-size: 14px; color: #e8e8e8; }
     color: var(--accent);
 }
 
+.profile {
+    width: 100%;
+    max-width: 400px;          /* keeps it from getting too big on desktop */
+    height: auto;              /* let height follow the image */
+    aspect-ratio: 4 / 5;       /* keeps a nice portrait shape */
+    object-fit: cover;
+    border-radius: 16px;
+    border: 6px solid rgba(255,255,255,0.1);
+    display: block;
+    margin-inline: auto;
+}
+
+/* Greeting / enter-your-name form */
+.inline-form {
+    display: flex;
+    flex-wrap: wrap;           /* allow input + button to wrap on small screens */
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.inline-form input {
+    flex: 1 1 160px;           /* grow/shrink nicely */
+    min-width: 0;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.inline-form button {
+    flex: 0 0 auto;            /* button stays its natural size */
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
