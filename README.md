@@ -44,7 +44,7 @@ Clean and organize my CSS file by removing redundancy, improving formatting, and
 
 ## 📂 Project Structure
 ```
-assignment-1/
+assignment-4/
 ├── README.md
 ├── index.html
 ├── css/
@@ -56,5 +56,8 @@ assignment-1/
 ├── docs/
 │   ├── ai-usage-report.md
 │   └── technical-documentation.md
+├── presentation/
+│   ├── slides.pdf
+│   └── demo-video.mp4
 └── .gitignore
 ```
