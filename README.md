@@ -1,9 +1,16 @@
 # Aleen AlQarni – Personal Portfolio - Assignment 4
 
 ## 📌 Assignment Description
-This project is an enhanced version of my personal portfolio website, developed for Assignment 4. It showcases my skills through dynamic features, interactive UI components, and data-driven functionality built using HTML, CSS, and JavaScript.
-The site integrates external APIs, applies complex filtering and validation logic, manages user preferences using localStorage, and uses performance optimizations for a smooth and responsive user experience.
-This assignment expands on previous work by refining interactive features, improving code structure, and increasing the site’s overall usability and professionalism.
+This project represents the final stage of a multi-assignment journey to build a complete, interactive, responsive personal portfolio web application.
+Across four assignments, the website evolved from a simple HTML portfolio into a dynamic, user-friendly, API-powered, and professionally structured web application.
+This final version showcases:
+* A polished UI
+* Dynamic content using external APIs
+* Interactive features built with JavaScript
+* State persistence using localStorage
+* Optimized performance
+* Clean code structure and enhanced documentation
+It is designed to be production-ready, visually appealing, and fully functional as a real personal portfolio website.
 ## ✨ Features
 ### API Integration:
 * Integrated the GitHub REST API to dynamically fetch and display my latest repositories. 
