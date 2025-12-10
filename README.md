@@ -12,30 +12,35 @@ This final version showcases:
 * Clean code structure and enhanced documentation
 It is designed to be production-ready, visually appealing, and fully functional as a real personal portfolio website.
 ## ✨ Features
-### API Integration:
-* Integrated the GitHub REST API to dynamically fetch and display my latest repositories. 
-    * The section shows each repository’s name, description, language, and “last updated” time in a user-friendly format.
-  Includes loading spinners and error messages to handle API downtime gracefully. <br></br>
-* Integrated a second external API to fetch and display random cat photos when the user clicks a button.
-  * Includes a loading animation and fallback message if the request fails.<br></br>
-* Icon-Enhanced Navigation: Added icons beside main navigation links (About, Projects, GitHub, Contact) for improved visual clarity and professional appearance.
+This section lists all features implemented throughout the development process.
+### 1. Core Website Structure (Assignment 1)
+* Multi-section personal portfolio website
+* Semantic and accessible HTML structure
+* Sections included: Home, About, Skills, Projects, Contact
+* Embedded profile image and introduction
+* Basic responsive layout design
+* Footer with social links
 
-### Complex Logic:
-I implemented several interactive features using conditions and multi-step logic:
-* Projects Filter & Sort: Users can filter projects by category or skill level and sort them by date or name. If no projects match, a friendly message appears.
-* Contact Form Validation: Checks for empty fields and valid email format before allowing submission. Displays success or error messages and stores data in localStorage.
-* Timer: A live “Time on Site” counter updates every second.
+### 2. UI/UX Enhancements & Styling (Assignment 2)
+* Advanced CSS styling using Flexbox & Grid
+* Smooth scrolling navigation
+* Active section highlighting in the navbar
+* Hover animations and UI transitions
+* Updated, professional layout with better spacing
+* Improved contact form design with modern UI
+* Fully responsive layout across devices
 
-### State Management:
-* Randomized Theme Accent: The site lets users randomize the accent color with one click and remembers their chosen color using localStorage, keeping it consistent on reload.
-* Projects Show/Hide State: The visibility of the Projects section is saved, so if a user hides it, the setting remains after page reload.
-* Personalized Greeting: The user’s name is stored in localStorage and displayed in a custom greeting message that updates dynamically based on the time of day.
+### 3. Dynamic & Interactive Logic (Assignment 3)
+* API Integrations
+   * GitHub REST API
+   * Fetches live repositories
+   * Displays name, description, language, and last updated
+   * Includes loading spinner & error handling
+* Random Cat Image API
+   * Fetches and displays random cat images
+   * Loading animation + error fallback
 
-### Performance
-* Optimized Code Structure: Used clean, efficient JavaScript and CSS
-* Deferred Script Loading
-* Responsive & Efficient Images: Used appropriately sized images for profile and project cards with fixed dimensions to prevent layout shifts and improve load time.
-* CSS Variables for Theming: Implemented --accent color variables for quick theme changes without re-rendering or extra styles.
+#### Write here 
 
 # How to run ?
 1. Copy this link (https://github.com/darkwinTech/assignement-4.git) and clone it into your IDE (WebStorm or VSCode)
