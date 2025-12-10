@@ -1,8 +1,9 @@
-# Aleen AlQarni – Personal Portfolio - Assignment 3
+# Aleen AlQarni – Personal Portfolio - Assignment 4
 
 ## 📌 Assignment Description
-For Assignment 3, I enhanced my portfolio website by adding dynamic, interactive, and data-driven features using HTML, CSS, and JavaScript. The project integrates external APIs, applies complex logic for filtering and validation, manages user preferences with localStorage, and optimizes performance for a smooth experience.
-Key improvements include fetching live GitHub repositories, project filtering and sorting, a randomized theme accent, and responsive design
+This project is an enhanced version of my personal portfolio website, developed for Assignment 4. It showcases my skills through dynamic features, interactive UI components, and data-driven functionality built using HTML, CSS, and JavaScript.
+The site integrates external APIs, applies complex filtering and validation logic, manages user preferences using localStorage, and uses performance optimizations for a smooth and responsive user experience.
+This assignment expands on previous work by refining interactive features, improving code structure, and increasing the site’s overall usability and professionalism.
 ## ✨ Features
 ### API Integration:
 * Integrated the GitHub REST API to dynamically fetch and display my latest repositories. 
@@ -37,6 +38,9 @@ I implemented several interactive features using conditions and multi-step logic
 5. Interact with the website and fill the Contact form 
 6. To see local storage of the contact form:
     * Right Click > Inspect > Console > write "JSON.parse(localStorage.getItem("contactSubmissions"))" to see users entered data.
+
+Or simply you can click on (https://darkwintech.github.io/assignement-4/)
+   
 
 # 🤖 AI Use (Short Summary)
 AI (ChatGPT) was used to:
