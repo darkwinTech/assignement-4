@@ -40,23 +40,37 @@ This section lists all features implemented throughout the development process.
    * Fetches and displays random cat images
    * Loading animation + error fallback
 
-#### Write here 
+#### Interactivity & Logic
+* Project filtering (category, skill level)
+* Sorting system (date, alphabetical)
+* Contact form validation:
+  * Empty field detection
+  * Email format validation
+  * Success/error notifications
+* Timer tracking "time spent on website"
 
-# How to run ?
-1. Copy this link (https://github.com/darkwinTech/assignement-4.git) and clone it into your IDE (WebStorm or VSCode)
-2. Click Trust Project
-3. Go to index.html file and run it
-4. It will direct you to the browser (e.g. Chrome)
-5. Interact with the website and fill the Contact form 
-6. To see local storage of the contact form:
-    * Right Click > Inspect > Console > write "JSON.parse(localStorage.getItem("contactSubmissions"))" to see users entered data.
+### State Management (localStorage)
+* Saves selected theme accent color
+* Stores user name & displays personalized greeting
+* Saves contact form submissions
+* Remembers if Projects section is hidden or shown
 
-Or simply you can click on (https://darkwintech.github.io/assignement-4/)
-   
+### Performance Improvements
+* Deferred JS loading
+* Compressed and optimized images
+* Cleaner, modular CSS and JS
+* CSS variables (--accent-color) for instant theme changes
 
-# 🤖 AI Use (Short Summary)
-AI (ChatGPT) was used to:
-Clean and organize my CSS file by removing redundancy, improving formatting, and ensuring consistent styling. It also helped optimize selectors and structure the stylesheet for better readability and performance.
+### 4. Production-Ready Features (Assignment 4)
+* Fully deployed to GitHub Pages
+* Clean, organized folder structure and documentation
+* Meaningful commit history and version control practices
+* Error handling for:
+  * API failures
+  * Invalid form entries
+  * Missing project results
+* Cross-browser compatibility testing
+* Professional design aligned with real-world portfolio standards
 
 ## 📂 Project Structure
 ```
@@ -77,3 +91,24 @@ assignment-4/
 │   └── demo-video.mp4
 └── .gitignore
 ```
+
+# How to run ?
+1. Copy this link (https://github.com/darkwinTech/assignement-4.git) and clone it into your IDE (WebStorm or VSCode)
+2. Click Trust Project
+3. Go to index.html file and run it
+4. It will direct you to the browser (e.g. Chrome)
+5. Interact with the website and fill the Contact form 
+6. To see local storage of the contact form:
+    * Right Click > Inspect > Console > write "JSON.parse(localStorage.getItem("contactSubmissions"))" to see users entered data.
+
+# Live Deployment
+The project is fully deployed and accessible here:   
+(https://darkwintech.github.io/assignement-4/)
+
+# 🤖 AI Use (Short Summary)
+AI tools (ChatGPT) were used responsibly to assist with:
+* Code refactoring (CSS cleanup, formatting improvements)
+* Debugging small JavaScript issues
+* Documentation writing (README + technical notes)
+* Suggestions for UI/UX improvements
+* Improving code structure for clarity and maintainability
